@@ -3,14 +3,15 @@ This repository is used for testing composer's version invalidation feature.
 To test it, use this composer.json on your project.
 
     {
-        "repositories": {
-            "foobar": {
-                "vcs": {
-                    "url": "https://github.com/igorw/composer-version-invalidation"
-                }
+        "repositories": [
+            {
+                "type": "vcs",
+                "url": "https://github.com/igorw/composer-version-invalidation"
             },
-            "packagist": false
-        },
+            {
+                "packagist": false
+            }
+        ],
         "require": {
             "igorw/foobar": "1.0.0"
         }
